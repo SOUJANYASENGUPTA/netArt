@@ -1,0 +1,137 @@
+$mobile-breakpoint: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+.ad {
+  max-width: 1346px;
+ @include mobile{
+    max-height: 100vh;
+ }
+  p {
+    padding-top: 20px;
+    margin: 10%;
+    margin-bottom: unset;
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+
+    @include mobile {
+      padding-top: 50px;
+      margin: 5%;
+      font-size: smaller;
+    }
+  }
+
+  img {
+    height: 190px;
+    width: 50%;
+    margin-left: 25%;
+
+    @include mobile {
+      width: 90%;
+      height: 100%;
+      margin-left: 5%;
+      padding-top: 50px;
+    }
+  }
+
+  h4 {
+    margin-left: 27%;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: small;
+
+    @include mobile {
+      margin-left: 5%;
+      margin-top: 100px;
+      font-size: smaller;
+      text-align: center;
+    }
+  }
+
+  h3 {
+    margin-top: 5px;
+    font-size: small;
+    margin-left: 30%;
+
+    @include mobile {
+      margin-left: 10%;
+      margin-top: 5px;
+      font-size: smaller;
+    }
+  }
+
+  h5 {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 30px;
+
+    @include mobile {
+      margin-top: 20px;
+      font-size: smaller;
+      line-height: 40px;
+    }
+  }
+
+  .bottomline {
+    margin: 2%;
+    margin-top: 1%;
+    border: 1.5px solid red;
+
+    @include mobile {
+      margin: 5%;
+      margin-top: 2%;
+    }
+  }
+
+  .vertical {
+    margin: 3px;
+    border: 1.5px solid red;
+
+    @include mobile {
+      margin: 5px;
+    }
+  }
+
+  .bottom-bar {
+    margin-top: 30px;
+    background-color: #f80505;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      padding: 0px;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    ul li:last-child {
+      margin-right: 0;
+    }
+
+    ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    // Mobile responsiveness
+    @include mobile {
+      padding: 40px;
+      margin-top: 20px;
+
+      ul li {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+$mobile-breakpoint: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+.hero {
+  .logo {
+    margin-top: -100px;
+    display: block;
+    scale: 0.3;
+    margin-left: 10%;
+
+    @include mobile {
+      margin-top: -50px;
+      scale: 0.3;
+      margin-left: -25%;
+    }
+  }
+
+  .wrapper {
+    max-width: 1326px;
+
+    .trophy {
+      margin-top: -150px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mobile {
+        margin-top: -100px;
+        height: 400px;
+        margin-left: 25%;
+      }
+    }
+
+    .imagecontainer {
+      position: absolute;
+      top: 85px;
+      right: 60px;
+      max-width: 650px;
+
+      h3 {
+        margin-top: 8px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: small;
+
+        @include mobile {
+          margin-top: 40vh;
+          font-size: smaller;
+          max-width: 80vw;
+          margin-left: 10%;
+        }
+      }
+
+      p {
+        font-size: 12px;
+        margin-bottom: 10px;
+
+        @include mobile {
+          font-size: smaller;
+          max-width: 80vw;
+          margin-left: 10%;
+        }
+      }
+
+      img {
+        width: 400px;
+        height: 250px;
+        margin-left: 15%;
+
+        @include mobile {
+          width: 100%;
+          height: auto;
+          margin-left: 0;
+          margin-left: 5%;
+        }
+      }
+    }
+  }
+}
